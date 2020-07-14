@@ -37,6 +37,7 @@ header {
   padding: 1rem;
   position: fixed;
   top: 0;
+  z-index: 100;
   width: 100%;
   box-shadow: 0 2px 3px 3px rgba(99,16,30,.2);
   background: rgba(0,0,0,.9);
@@ -69,6 +70,8 @@ main {
   color: white;
   background-size: cover;
   padding-top: 225px;
+  box-shadow: 0 1px 4px 2px rgba(11,11,9,0.7);
+  position: relative;
 }
 
 .home__content p:first-child {
@@ -98,7 +101,6 @@ main {
 
 .portfolio {
   background: #7d9195;
-  padding: 7.5vw 0;
 }
 
 .portfolio__project {
@@ -109,6 +111,10 @@ main {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 0px 6px 1px rgba(55,55,55,0.7);
+}
+
+.container__col:last-child .portfolio__project {
+  margin-bottom: 0;
 }
 
 .portfolio__thumbnail {
@@ -127,7 +133,6 @@ main {
 
 .portfolio__header {
   font-size: 3.5rem;
-  text-shadow: 1px 1px 2px #000;
 }
 
 .portfolio__desc {
@@ -160,6 +165,35 @@ main {
   transtion: right 0.3s ease-in;
 }
 
+.about {
+  background: url(https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat bottom center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 4px 2px rgba(11,11,9,0.7);
+  color: #f1f1f1;
+}
+
+.about__image {
+  border-radius: 15%;
+  box-shadow: 0px 0px 6px 1px rgba(55,55,55,0.7);
+}
+
+.about__content {
+  height: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about__header {
+  font-size: 2.6rem;
+}
+
+.about__text {
+  font-size: 1.15rem;
+}
+
 footer {
   text-align: center;
   border-top: 1px solid;
@@ -180,6 +214,23 @@ img:not(.non-responsive) {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.vertical-padding {
+  padding-top: 7.5vw;
+  padding-bottom: 7.5vw;
+}
+
+.text-shadow-blk {
+  text-shadow: 1px 1px 2px #000;
 }
 
 @media(min-width: 900px) {
