@@ -61,6 +61,7 @@ header {
 
 main {
   flex: 1;
+  border-bottom: 1px solid #0a0a0a;
 }
 
 .home {
@@ -194,19 +195,123 @@ main {
   font-size: 1.15rem;
 }
 
-footer {
+.contact {
+  background: #434E50;
+  padding: 2.5rem 0;
   text-align: center;
-  border-top: 1px solid;
-  padding: 20px;
 }
 
-footer p {
-  margin-top: 10px;
+.contact__btn {
+  display: inline-block;
+  color: #F96F27;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border: 3px solid #F96F27;
+  font-size: 1.4rem;
+}
+
+.contact__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(55,55,55,0.9);
+  z-index: 1000;
+}
+
+.form {
+  max-width: 500px;
+  width: 100%;
+  background: #222;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(22,22,22,0.5);
+  border: 2px solid #111;
+}
+
+.form__header {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: orange;
+}
+
+.form__label {
+  display: none; /* add style to display on input focus */
+}
+
+.form__input, 
+.form__textarea {
+  width: 100%;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 0 none;
+  font-size: 1.2rem;
+}
+
+.form__textarea {
+  height: 6rem;
+}
+
+.form__submit-btn {
+  background: orange;
+  border: 0 none;
+  width: 100%;
+  padding: .75rem 2rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.footer {
+  background: #222;
+  border-top: 1px solid #7E9195;
+  text-align: center;
+}
+
+.footer__icons {
+  padding: 2.5rem 0;
+  position: relative;
+}
+
+.footer__icons::after {
+  content: '';
+  border-bottom: 2px solid #0a0a0a;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+}
+
+.footer__copy {
+  color: #7E9195;
+  line-height: 4;
+  position: relative;
+}
+
+.footer__copy::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  border-top: 1px solid;
 }
 
 img:not(.non-responsive) {
   max-width: 100%;
   height: auto;
+}
+
+.hide {
+  display: none;
 }
 
 .flex-center {
@@ -238,4 +343,3 @@ img:not(.non-responsive) {
     width: 49.5%;
   }
 }
-

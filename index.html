@@ -144,31 +144,23 @@
     </section>
     <!-- about end -->
     <!-- contact start -->
-    <section id="contact" class="contact flex-center">
+    <section id="contact" class="contact">
       <a href="#" class="contact__btn">Message Me</a>
-      <div class="contact__form">
-        <h3 class="contact__form-header">Get in Touch</h3>
+      <div class="contact__modal hide">
         <!-- contact form start -->
         <form class="form" action="#">
+          <h3 class="form__header">Get in Touch</h3>
           <div class="form__field-group">
-            <label for="">First Name</label>
-            <input type="text">
+            <label class="form__label" for="">Full Name</label>
+            <input class="form__input" type="text" placeholder="Full Name">
           </div>
           <div class="form__field-group">
-            <label for="">Last Name</label>
-            <input type="text">
+            <label class="form__label" for="">Email</label>
+            <input class="form__input" type="email" placeholder="example@email.com">
           </div>
           <div class="form__field-group">
-            <label for="">Email</label>
-            <input type="email">
-          </div>
-          <div class="form__field-group">
-            <label for="">Phone</label>
-            <input type="number">
-          </div>
-          <div class="form__field-group">
-            <label for="">Message</label>
-            <textarea></textarea>
+            <label class="form__label" for="">Message</label>
+            <textarea class="form__textarea" placeholder="Message..."></textarea>
           </div>
           <input class="form__submit-btn" type="submit" value="Send">
         </form>
@@ -185,7 +177,7 @@
       <a href="#" class="footer__icon"><img src="assets/images/icons/icons8-linkedin-48.png" alt="LinkedIn Icon"></a>
       <a href="#" class="footer__icon"><img src="assets/images/icons/icons8-email-48.png" alt="Email Icon"></a>
     </div>
-    <p class="copy">&copy; JR Web Creations</p>
+    <p class="footer__copy">&copy; JR Web Creations</p>
   </footer>
   <!-- footer end -->
 </body>
