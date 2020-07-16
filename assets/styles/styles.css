@@ -217,12 +217,22 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 10px;
+}
+
+.contact__modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background: rgba(55,55,55,0.9);
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .form {
@@ -233,6 +243,17 @@ main {
   border-radius: 5px;
   box-shadow: 0 0 6px 2px rgba(22,22,22,0.5);
   border: 2px solid #111;
+  position: relative;
+  z-index: 1002;
+}
+
+.form__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+  color: orange;
+  cursor: pointer;
 }
 
 .form__header {

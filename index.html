@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JR Web Creations</title>
   <link rel="stylesheet" href="assets/styles/styles.css">
+  <script src="assets/scripts/index.js" defer></script>
 </head>
 <body>
   <!-- header start -->
@@ -147,8 +148,10 @@
     <section id="contact" class="contact">
       <a href="#" class="contact__btn">Message Me</a>
       <div class="contact__modal hide">
+        <div class="contact__modal-bg"></div>
         <!-- contact form start -->
         <form class="form" action="#">
+          <div class="form__close">X</div>
           <h3 class="form__header">Get in Touch</h3>
           <div class="form__field-group">
             <label class="form__label" for="">Full Name</label>
