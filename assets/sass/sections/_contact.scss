@@ -1,0 +1,42 @@
+.contact {
+  background: #434E50;
+  padding: 2.5rem 0;
+  text-align: center;
+
+  // .contact__btn
+  &__btn {
+    display: inline-block;
+    color: #F96F27;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border: 3px solid #F96F27;
+    font-size: 1.4rem;
+  }
+  
+  // .contact__modal
+  &__modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  
+  // .contact__modal-bg
+  &__modal-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(55,55,55,0.9);
+    z-index: 1001;
+  }
+}

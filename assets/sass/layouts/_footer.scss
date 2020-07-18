@@ -1,0 +1,38 @@
+.footer {
+  background: #222;
+  border-top: 1px solid #7E9195;
+  text-align: center;
+
+  // .footer__icons
+  &__icons {
+    padding: 2.5rem 0;
+    position: relative;
+  }
+  
+  // .footer__icons::after
+  &__icons::after {
+    content: '';
+    border-bottom: 2px solid #0a0a0a;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+  }
+  
+  // .footer__copy
+  &__copy {
+    color: #7E9195;
+    line-height: 4;
+    position: relative;
+  }
+  
+  // .footer__copy::after
+  &__copy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    border-top: 1px solid;
+  }
+}

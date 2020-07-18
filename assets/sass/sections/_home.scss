@@ -1,0 +1,39 @@
+.home {
+  text-align: center;
+  flex-direction: column;
+  background: url(https://images.pexels.com/photos/234527/pexels-photo-234527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center;
+  color: white;
+  background-size: cover;
+  padding-top: 225px;
+  box-shadow: 0 1px 4px 2px rgba(11,11,9,0.7);
+  position: relative;
+
+  // .home__content p:first-child
+  &__content p:first-child {
+    font-size: 8rem;
+    font-weight: bold;
+  }
+  
+  // .home__content p:not(:first-child)
+  &__content p:not(:first-child) {
+    font-size: 3rem;
+    max-width: 80vw;
+    margin: 0 auto;
+    line-height: 1.4;
+    margin-top: 1rem;
+  }
+  
+  // .home__cta-btn
+  &__cta-btn {
+    margin: 2rem;
+    display: inline-block;
+    color: orange;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem;
+    border: 2px solid;
+    background: rgba(15,15,15,.6);
+  }
+}
+

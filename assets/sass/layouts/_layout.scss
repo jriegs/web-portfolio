@@ -1,0 +1,20 @@
+// container/column layout styles
+
+.container {
+  max-width: 85vw;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  //.container__col
+  &__col {
+    width: 100%;
+  }
+}
+
+@media(min-width: 900px) {
+  .container__col--2 {
+    width: 49.5%;
+  }
+}

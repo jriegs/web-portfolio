@@ -1,0 +1,62 @@
+.form {
+  max-width: 500px;
+  width: 100%;
+  background: #222;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(22,22,22,0.5);
+  border: 2px solid #111;
+  position: relative;
+  z-index: 1002;
+
+  // .form__close
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: bold;
+    color: orange;
+    cursor: pointer;
+  }
+  
+  // .form__header
+  &__header {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: orange;
+  }
+  
+  // .form__label
+  &__label {
+    display: none; /* add style to display on input focus */
+  }
+  
+  // .form__input, 
+  // .form__textarea
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 0 none;
+    font-size: 1.2rem;
+  }
+  
+  // .form__textarea
+  &__textarea {
+    height: 6rem;
+  }
+  
+  // .form__submit-btn
+  &__submit-btn {
+    background: orange;
+    border: 0 none;
+    width: 100%;
+    padding: .75rem 2rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: bold;
+  }
+}
