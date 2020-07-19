@@ -32,8 +32,18 @@
     font-size: 2rem;
     text-decoration: none;
     padding: 1rem;
-    border: 2px solid;
+    border: 3px solid;
+    border-radius: 8px;
     background: rgba(15,15,15,.6);
+    display: flex;
+    align-items: center;
+  }
+
+  &__cta-icon {
+    height: 50px;
+    width: 50px;
+    fill: orange;
+    margin-right: 10px;
   }
 }
 

@@ -9,9 +9,18 @@
     color: #F96F27;
     font-weight: bold;
     text-decoration: none;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem 1.6rem;
     border: 3px solid #F96F27;
     font-size: 1.4rem;
+    border-radius: 8px;
+  }
+
+  // .contact__icon
+  &__btn-icon {
+    height: 40px;
+    width: 40px;
+    fill: #F96F27;
+    transform: translateY(8px);
   }
   
   // .contact__modal

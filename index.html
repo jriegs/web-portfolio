@@ -15,10 +15,38 @@
     </div>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <li class="nav__item">
+          <a href="#home" class="nav__link">
+            <svg class="nav__icon">
+              <use xlink:href="assets/images/sprite.svg#icon-home3"></use>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#portfolio" class="nav__link">
+            <svg class="nav__icon">
+              <use xlink:href="assets/images/sprite.svg#icon-eye"></use>
+            </svg>
+            Portfolio
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">
+            <svg class="nav__icon">
+              <use xlink:href="assets/images/sprite.svg#icon-user-tie"></use>
+            </svg>
+            About
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">
+            <svg class="nav__icon">
+              <use xlink:href="assets/images/sprite.svg#icon-address-book"></use>
+            </svg>
+            Contact
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -32,12 +60,17 @@
         <p>Front-End Web Developer with a passion for creating. I build and breathe life into immersive websites and web apps.</p>
       </div>
       <div class="home__ctas">
-        <a href="#portfolio" class="home__cta-btn">See My Work</a>
+        <a href="#portfolio" class="home__cta-btn">
+          <svg class="home__cta-icon">
+            <use xlink:href="assets/images/sprite.svg#icon-circle-down"></use>
+          </svg>
+          See My Work
+        </a>
       </div>
     </section>
     <!-- portfolio start -->
-    <section id="portfolio" class="portfolio flex-center">
-      <div class="container vertical-padding">
+    <section id="portfolio" class="portfolio flex-center vertical-padding">
+      <div class="container">
         <!-- portfolio col 1 start -->
         <div class="container__col">
           <div class="portfolio__project">
@@ -146,7 +179,12 @@
     <!-- about end -->
     <!-- contact start -->
     <section id="contact" class="contact">
-      <a href="#" class="contact__btn">Message Me</a>
+      <a href="#" class="contact__btn">
+        <svg class="contact__btn-icon">
+          <use xlink:href="assets/images/sprite.svg#icon-bubble2"></use>
+        </svg>
+        Message Me
+      </a>
       <div class="contact__modal hide">
         <div class="contact__modal-bg"></div>
         <!-- contact form start -->
@@ -176,9 +214,21 @@
   <!-- footer start -->
   <footer class="footer">
     <div class="footer__icons">
-      <a href="#" class="footer__icon"><img src="assets/images/icons/icons8-github-48.png" alt="Github Icon"></a>
-      <a href="#" class="footer__icon"><img src="assets/images/icons/icons8-linkedin-48.png" alt="LinkedIn Icon"></a>
-      <a href="#" class="footer__icon"><img src="assets/images/icons/icons8-email-48.png" alt="Email Icon"></a>
+      <a href="#" class="footer__icon-link">
+        <svg class="footer__icon">
+          <use xlink:href="assets/images/sprite.svg#icon-github"></use>
+        </svg>
+      </a>
+      <a href="#" class="footer__icon-link">
+        <svg class="footer__icon">
+          <use xlink:href="assets/images/sprite.svg#icon-linkedin2"></use>
+        </svg>
+      </a>
+      <a href="#" class="footer__icon-link">
+        <svg class="footer__icon">
+          <use xlink:href="assets/images/sprite.svg#icon-google"></use>
+        </svg>
+      </a>
     </div>
     <p class="footer__copy">&copy; JR Web Creations</p>
   </footer>
