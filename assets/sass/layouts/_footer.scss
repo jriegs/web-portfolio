@@ -1,6 +1,6 @@
 .footer {
-  background: #222;
-  border-top: 1px solid #7E9195;
+  background: color(gray-2);
+  border-top: 1px solid color(secondary);
   text-align: center;
 
   // .footer__icons
@@ -12,7 +12,7 @@
   // .footer__icons::after
   &__icons::after {
     content: '';
-    border-bottom: 2px solid #0a0a0a;
+    border-bottom: 2px solid color(black-2);
     position: absolute;
     bottom: 0;
     left: 25%;
@@ -22,7 +22,7 @@
   &__icon-link {
     display: inline-block;
     border-radius: 50%;
-    border: 3px solid #7E9195;
+    border: 3px solid color(secondary);
     margin: 0 10px;
     padding: 10px;
   }
@@ -30,13 +30,13 @@
   &__icon {
     height: 40px;
     width: 40px;
-    stroke: #7E9195;
-    fill: #7E9195;
+    stroke: color(secondary);
+    fill: color(secondary);
   }
   
   // .footer__copy
   &__copy {
-    color: #7E9195;
+    color: color(secondary);
     line-height: 4;
     position: relative;
   }

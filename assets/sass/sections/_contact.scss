@@ -1,16 +1,16 @@
 .contact {
-  background: #434E50;
+  background: color(tertiary);
   padding: 2.5rem 0;
   text-align: center;
 
   // .contact__btn
   &__btn {
     display: inline-block;
-    color: #F96F27;
+    color: color(primary);
     font-weight: bold;
     text-decoration: none;
     padding: 1rem 2rem 1.6rem;
-    border: 3px solid #F96F27;
+    border: 3px solid color(primary);
     font-size: 1.4rem;
     border-radius: 8px;
   }
@@ -19,7 +19,7 @@
   &__btn-icon {
     height: 40px;
     width: 40px;
-    fill: #F96F27;
+    fill: color(primary);
     transform: translateY(8px);
   }
   
