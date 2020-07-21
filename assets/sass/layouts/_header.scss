@@ -1,4 +1,4 @@
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,6 +7,22 @@ header {
   top: 0;
   z-index: 100;
   width: 100%;
+  background: rgba(0,0,0,0);
+  transition: background 0.3s ease-out;
+
+  .logo {
+    max-width: 273px;
+    transition: max-width .3s ease-out;
+  }
+}
+
+.header--scroll {
   box-shadow: 0 2px 3px 3px rgba(99,16,30,.2);
   background: rgba(0,0,0,.9);
+  transition: background 0.3s ease-in;
+
+  .logo {
+    max-width: 180px;
+    transition: max-width 0.3s ease-in;
+  }
 }

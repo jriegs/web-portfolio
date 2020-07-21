@@ -25,6 +25,16 @@
     border: 3px solid color(secondary);
     margin: 0 10px;
     padding: 10px;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: color(tertiary);
+    }
+
+    &:hover .footer__icon {
+      stroke: color(tertiary);
+      fill: color(tertiary);
+    }
   }
 
   &__icon {
@@ -32,7 +42,13 @@
     width: 40px;
     stroke: color(secondary);
     fill: color(secondary);
+    transition: all 0.3s;
   }
+
+  &__icon-link:first-child &__icon, 
+  &__icon-link:last-child &__icon {
+    transform: translateY(2px);
+}
   
   // .footer__copy
   &__copy {

@@ -16,6 +16,14 @@
     color: color(white-1);
     font-weight: bold;
     text-decoration: none;
+
+    &:hover {
+      color: color(primary);
+    }
+
+    &:hover .nav__icon {
+      fill: color(primary);
+    }
   }
 
   // .nav__icon
@@ -23,5 +31,5 @@
     height: 20px;
     width: 20px;
     fill: color(white-1);
-}
+  }
 }

@@ -38,12 +38,40 @@ img:not(.non-responsive) {
 .order-2 {
   order: 2; }
 
+.bottom-margin {
+  margin-bottom: 3rem; }
+
 .vertical-padding {
   padding-top: 7.5vw;
   padding-bottom: 7.5vw; }
 
 .text-shadow-blk {
   text-shadow: 1px 1px 2px #000; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1rem;
+  border: 3px solid;
+  border-radius: 8px;
+  transition: all 0.3s; }
+  .btn--primary {
+    color: #F96F27; }
+    .btn--primary:hover {
+      color: #9c3804; }
+    .btn--primary:hover .icon--primary {
+      fill: #9c3804; }
+
+.icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  transition: all 0.3s; }
+  .icon--primary {
+    fill: #F96F27; }
 
 .form {
   max-width: 500px;
@@ -107,12 +135,22 @@ img:not(.non-responsive) {
     border-radius: 50%;
     border: 3px solid #7d9195;
     margin: 0 10px;
-    padding: 10px; }
+    padding: 10px;
+    transition: all 0.3s; }
+    .footer__icon-link:hover {
+      border-color: #434E50; }
+    .footer__icon-link:hover .footer__icon {
+      stroke: #434E50;
+      fill: #434E50; }
   .footer__icon {
     height: 40px;
     width: 40px;
     stroke: #7d9195;
-    fill: #7d9195; }
+    fill: #7d9195;
+    transition: all 0.3s; }
+  .footer__icon-link:first-child .footer__icon,
+  .footer__icon-link:last-child .footer__icon {
+    transform: translateY(2px); }
   .footer__copy {
     color: #7d9195;
     line-height: 4;
@@ -125,7 +163,7 @@ img:not(.non-responsive) {
     right: 25%;
     border-top: 1px solid; }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,8 +172,19 @@ header {
   top: 0;
   z-index: 100;
   width: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease-out; }
+  .header .logo {
+    max-width: 273px;
+    transition: max-width .3s ease-out; }
+
+.header--scroll {
   box-shadow: 0 2px 3px 3px rgba(99, 16, 30, 0.2);
-  background: rgba(0, 0, 0, 0.9); }
+  background: rgba(0, 0, 0, 0.9);
+  transition: background 0.3s ease-in; }
+  .header--scroll .logo {
+    max-width: 180px;
+    transition: max-width 0.3s ease-in; }
 
 .container {
   max-width: 85vw;
@@ -162,6 +211,10 @@ header {
   color: #fff;
   font-weight: bold;
   text-decoration: none; }
+  .nav__link:hover {
+    color: #F96F27; }
+  .nav__link:hover .nav__icon {
+    fill: #F96F27; }
 
 .nav__icon {
   height: 20px;
@@ -179,7 +232,7 @@ header {
     box-shadow: 0px 0px 6px 1px rgba(55, 55, 55, 0.7); }
   .about__content {
     height: 100%;
-    padding: 2rem 4rem;
+    padding: 0 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
@@ -191,21 +244,8 @@ header {
 .contact {
   background: #434E50;
   padding: 2.5rem 0;
-  text-align: center; }
-  .contact__btn {
-    display: inline-block;
-    color: #F96F27;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 1rem 2rem 1.6rem;
-    border: 3px solid #F96F27;
-    font-size: 1.4rem;
-    border-radius: 8px; }
-  .contact__btn-icon {
-    height: 40px;
-    width: 40px;
-    fill: #F96F27;
-    transform: translateY(8px); }
+  display: flex;
+  justify-content: center; }
   .contact__modal {
     position: fixed;
     top: 0;
@@ -247,22 +287,7 @@ header {
     margin-top: 1rem; }
   .home__cta-btn {
     margin: 2rem;
-    display: inline-block;
-    color: #F96F27;
-    font-weight: bold;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 1rem;
-    border: 3px solid;
-    border-radius: 8px;
-    background: rgba(15, 15, 15, 0.6);
-    display: flex;
-    align-items: center; }
-  .home__cta-icon {
-    height: 50px;
-    width: 50px;
-    fill: #F96F27;
-    margin-right: 10px; }
+    background: rgba(15, 15, 15, 0.6); }
 
 .portfolio {
   background: #7d9195; }

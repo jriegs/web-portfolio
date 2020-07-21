@@ -1,3 +1,25 @@
+class HeaderScroll {
+  constructor() {
+    window.addEventListener('scroll', this.scrollHandler);
+  }
+
+  scrollHandler() {
+    const header = document.querySelector('header');
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      header.classList.add('header--scroll');
+    } else {
+      header.classList.remove('header--scroll');
+    }
+  }
+}
+
+class mobileMenu {
+  constructor() {
+    
+  }
+}
+
 class Modal {
   constructor() {
       const contactBtn = document.querySelector('.contact__btn');
@@ -20,6 +42,7 @@ class App {
   constructor() {}
 
   static init() {
+      new HeaderScroll();
       new Modal();
   }
 }
