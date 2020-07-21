@@ -6,15 +6,4 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  //.container__col
-  &__col {
-    width: 100%;
-  }
-}
-
-@media(min-width: 900px) {
-  .container__col--2 {
-    width: 49.5%;
-  }
 }

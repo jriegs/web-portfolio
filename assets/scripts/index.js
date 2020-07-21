@@ -22,7 +22,7 @@ class mobileMenu {
 
 class Modal {
   constructor() {
-      const contactBtn = document.querySelector('.contact__btn');
+      const contactBtn = document.querySelector('.js-contact-btn');
       const backdrop = document.querySelector('.contact__modal-bg');
       const x = document.querySelector('.form__close');
 
