@@ -1,8 +1,21 @@
 .nav {
+  &__menu-icon {
+    font-size: 1.4rem;
+    color: color(white-1);
+    
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
   // .nav__list
   &__list {
     list-style: none;
-    display: flex;
+    display: none;
+
+    @include respond(tablet) {
+      display: flex;
+    }
   }
 
   // .nav__item
@@ -16,6 +29,10 @@
     color: color(white-1);
     font-weight: bold;
     text-decoration: none;
+
+    @include respond(laptop) {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: color(primary);

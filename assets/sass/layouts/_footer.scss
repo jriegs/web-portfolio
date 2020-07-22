@@ -15,8 +15,13 @@
     border-bottom: 2px solid color(black-2);
     position: absolute;
     bottom: 0;
-    left: 25%;
-    right: 25%;
+    left: 10%;
+    right: 10%;
+
+    @include respond(tablet) {
+      left: 25%;
+      right: 25%;
+    }
   }
 
   &__icon-link {
@@ -38,11 +43,16 @@
   }
 
   &__icon {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     stroke: color(secondary);
     fill: color(secondary);
     transition: all 0.3s;
+
+    @include respond(tablet) {
+      height: 40px;
+      width: 40px;
+    }
   }
 
   &__icon-link:first-child &__icon, 
@@ -52,6 +62,7 @@
   
   // .footer__copy
   &__copy {
+    font-size: 1.4rem;
     color: color(secondary);
     line-height: 4;
     position: relative;
@@ -62,8 +73,13 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 25%;
-    right: 25%;
+    left: 10%;
+    right: 10%;
     border-top: 1px solid;
+
+    @include respond(tablet) {
+      left: 25%;
+      right: 25%;
+    }
   }
 }

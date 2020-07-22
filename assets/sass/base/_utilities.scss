@@ -7,33 +7,18 @@ img:not(.non-responsive) {
   display: none !important;
 }
 
-.responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.order-1 {
-  order: 1;
-}
-
-.order-2 {
-  order: 2;
-}
-
 .bottom-margin {
   margin-bottom: 3rem;
 }
 
 .vertical-padding {
-  padding-top: 7.5vw;
-  padding-bottom: 7.5vw;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+
+  @include respond(desktop) {
+    padding-top: 7.5vw;
+    padding-bottom: 7.5vw;
+  }
 }
 
 .text-shadow-blk {

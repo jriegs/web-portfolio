@@ -1,26 +1,44 @@
 .home {
   text-align: center;
   flex-direction: column;
-  background: url(https://images.pexels.com/photos/234527/pexels-photo-234527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center;
+  background: url(https://images.pexels.com/photos/234527/pexels-photo-234527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+  background-position: top left;
   color: color(white-1);
   background-size: cover;
-  padding-top: 225px;
+  padding-top: 100px;
   box-shadow: 0 1px 4px 2px rgba(11,11,9,0.7);
   position: relative;
 
+  @include respond(laptop) {
+    background-position: center center;
+    padding-top: 225px;
+  }
+
   // .home__content p:first-child
   &__content p:first-child {
-    font-size: 8rem;
+    font-size: 4rem;
     font-weight: bold;
+
+    @include respond(desktop) {
+      font-size: 10rem;
+    }
   }
   
   // .home__content p:not(:first-child)
   &__content p:not(:first-child) {
-    font-size: 3rem;
-    max-width: 80vw;
+    font-size: 1.6rem;
+    max-width: 95vw;
     margin: 0 auto;
     line-height: 1.4;
     margin-top: 1rem;
+
+    @include respond(laptop) {
+      max-width: 80vw;
+    }
+
+    @include respond(desktop) {
+      font-size: 4rem;
+    }
   }
   
   // .home__cta-btn

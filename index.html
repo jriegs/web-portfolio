@@ -13,7 +13,10 @@
     <div class="logo">
       <img class="logo__img" src="assets/images/jrwc-logo-light.png" alt="JR Web Creations Logo">
     </div>
-    <nav class="nav">
+    <nav class="nav nav--mobile">
+      <div class="nav__menu-icon">
+        Menu
+      </div>
       <ul class="nav__list">
         <li class="nav__item">
           <a href="#home" class="nav__link">
@@ -54,7 +57,7 @@
   <!-- main start -->
   <main>
     <!-- home start -->
-    <section id="home" class="home flex-center">
+    <section id="home" class="home flex-center full-height">
       <div class="home__content">
         <p>Julian Riegler</p>
         <p>Front-End Web Developer with a passion for creating. I build and breathe life into immersive websites and web apps.</p>
@@ -64,12 +67,12 @@
           <svg class="home__cta-icon icon icon--primary">
             <use xlink:href="assets/images/sprite.svg#icon-circle-down"></use>
           </svg>
-          See My Work
+          <span>See My Work</span>
         </a>
       </div>
     </section>
     <!-- portfolio start -->
-    <section id="portfolio" class="portfolio flex-center vertical-padding">
+    <section id="portfolio" class="portfolio flex-center full-height vertical-padding">
       <div class="container">
         <!-- portfolio project 1 start -->
         
@@ -153,16 +156,16 @@
     </section>
     <!-- portfolio end -->
     <!-- about start -->
-    <section id="about" class="about flex-center vertical-padding">
+    <section id="about" class="about flex-center full-height vertical-padding">
       <div class="container">
         <div class="responsive-grid">
         <!-- about col 1 start-->
-        <div class="about-col order-2">
+        <div class="about__col">
           <img class="about__image" src="assets/images/space-working.jpg" alt="About Julian Riegler | JR Web Creations">
         </div>
         <!-- about col 1 end -->
         <!-- about col 2 start-->
-        <div class="about-col order-1">
+        <div class="about__col">
           <div class="about__content">
             <h1 class="about__header text-shadow-blk bottom-margin">About Me</h1>
             <p class="about__text text-shadow-blk">
@@ -185,7 +188,7 @@
         <svg class="contact__btn-icon icon icon--primary">
           <use xlink:href="assets/images/sprite.svg#icon-bubble2"></use>
         </svg>
-        Message Me
+        <span>Message Me</span>
       </a>
       <div class="contact__modal hide">
         <div class="contact__modal-bg"></div>

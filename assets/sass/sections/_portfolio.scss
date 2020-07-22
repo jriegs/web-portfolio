@@ -4,10 +4,14 @@
   // .portfolio__project
   &__project {
     background: color(tertiary);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 0px 6px 1px rgba(55,55,55,0.7);
+
+    @include respond(tablet) {
+      margin-bottom: 5rem;
+    }
   }
 
   // .portfolio__thumbnail
@@ -17,23 +21,39 @@
 
   // .portfolio__content
   &__content {
-    padding: 4rem;
+    padding: 2rem;
     color: color(white-2);
     font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include respond(tablet) {
+      padding: 4rem;
+    }
   }
 
   // .portfolio__header
   &__header {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include respond(tablet) {
+      font-size: 3.5rem;
+      text-align: left;
+    }
   }
 
   // .portfolio__desc
   &__desc {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.4;
+    text-align: justify;
+
+    @include respond(tablet) {
+      text-align: left;
+    }
   }
   
   // .portfolio__link
@@ -41,10 +61,15 @@
     font-size: 1.4rem;
     color: color(primary);
     text-decoration: none;
-    /* border-bottom: 3px solid; */
     display: inline-block;
-    padding: 10px;
+    padding: 15px;
     position: relative;
+    text-align: center;
+
+    @include respond(tablet) {
+      padding: 10px;
+      text-align: left;
+    }
   }
   
   // .portfolio__link::after
@@ -55,13 +80,19 @@
     left: 0;
     right: 0;
     border-bottom: 3px solid;
-    transition: right 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
   
   // .portfolio__link:hover::after
   &__link:hover::after {
-    right: 50%;
-    transition: right 0.3s ease-in;
+    left: 20%;
+    right: 20%;
+    transition: all 0.3s ease-in;
+
+    @include respond(tablet) {
+      right: 50%;
+      left: 0;
+    }
   }
 }
 
