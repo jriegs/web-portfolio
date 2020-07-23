@@ -18,7 +18,7 @@
     left: 10%;
     right: 10%;
 
-    @include respond(tablet) {
+    @include respond(desktop) {
       left: 25%;
       right: 25%;
     }
@@ -77,7 +77,7 @@
     right: 10%;
     border-top: 1px solid;
 
-    @include respond(tablet) {
+    @include respond(desktop) {
       left: 25%;
       right: 25%;
     }

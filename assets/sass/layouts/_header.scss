@@ -15,6 +15,10 @@
     transition: max-width .3s ease-out;
 
     @include respond(laptop) {
+      max-width: 200px;
+    }
+
+    @include respond(desktop) {
       max-width: 273px;
     }
   }
@@ -30,6 +34,10 @@
     transition: max-width 0.3s ease-in;
 
     @include respond(laptop) {
+      max-width: 160px;
+    }
+
+    @include respond(desktop) {
       max-width: 180px;
     }
   }

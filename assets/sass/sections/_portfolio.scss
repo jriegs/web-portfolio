@@ -1,6 +1,23 @@
 .portfolio {
   background: color(secondary);
 
+  @include respond(xlg-phone) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .responsive-grid {
+    @include respond(tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+      gap: 2rem;
+    } 
+
+    @include respond(desktop) {
+      grid-template-columns: repeat(auto-fit, minmax(77rem, 1fr));
+      gap: 4rem;
+    } 
+  }
+
   // .portfolio__project
   &__project {
     background: color(tertiary);
@@ -10,7 +27,15 @@
     box-shadow: 0px 0px 6px 1px rgba(55,55,55,0.7);
 
     @include respond(tablet) {
-      margin-bottom: 5rem;
+      margin-bottom: 0rem;
+    }  
+  }
+
+  &__project.responsive-grid {
+    gap: 0;
+    
+    @include respond(desktop) {
+      grid-template-columns: repeat(auto-fit, minmax(75rem, 1fr));
     }
   }
 
@@ -39,6 +64,10 @@
     margin-bottom: 1rem;
     text-align: center;
 
+    @include respond(xlg-phone) {
+      margin-bottom: 2rem;
+    }
+
     @include respond(tablet) {
       font-size: 3.5rem;
       text-align: left;
@@ -51,6 +80,10 @@
     line-height: 1.4;
     text-align: justify;
 
+    @include respond(xlg-phone) {
+      font-size: 1.6rem;
+    }
+
     @include respond(tablet) {
       text-align: left;
     }
@@ -58,11 +91,11 @@
   
   // .portfolio__link
   &__link {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: color(primary);
     text-decoration: none;
     display: inline-block;
-    padding: 15px;
+    padding: 30px 15px 15px;
     position: relative;
     text-align: center;
 

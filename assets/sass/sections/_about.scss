@@ -10,9 +10,38 @@
     background-position: bottom center;
   }
 
+  @include respond(laptop) {
+    background-size: auto;
+    background-position: 15% 80%;
+  }
+
+  .responsive-grid {
+    @include respond(laptop) {
+      align-items: center;
+    }
+  }
+
   &__col {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    @include respond(xlg-phone) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    &--image {
+      @include respond(xlg-phone) {
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+      }
+
+      @include respond(laptop) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        order: 2;
+      }
+    }
   }
 
   // .about__image
@@ -23,7 +52,12 @@
     padding: .5rem;
     margin-bottom: 2rem;
 
+    @include respond(xlg-phone) {
+      margin-bottom: 3rem;
+    }
+
     @include respond(laptop) {
+      margin-bottom: 0;
       order: 2;
     }
   }
@@ -46,8 +80,11 @@
     font-size: 2.5rem;
     text-align: center;
 
-    @include respond(tablet) {
+    @include respond(xlg-phone) {
       font-size: 3rem;
+    }
+
+    @include respond(laptop) {
       text-align: left;
     }
   }
@@ -57,7 +94,11 @@
     font-size: 1.6rem;
     text-align: justify;
 
-    @include respond(tablet) {
+    @include respond(xlg-phone) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(laptop) {
       text-align: left;
     }
   }
