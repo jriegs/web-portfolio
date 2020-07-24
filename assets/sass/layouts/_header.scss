@@ -11,11 +11,11 @@
   transition: background 0.3s ease-out;
 
   .logo {
-    max-width: 100px;
+    max-width: 130px;
     transition: max-width .3s ease-out;
 
     @include respond(laptop) {
-      max-width: 200px;
+      max-width: 250px;
     }
 
     @include respond(desktop) {

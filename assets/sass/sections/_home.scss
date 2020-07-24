@@ -8,7 +8,7 @@
   box-shadow: 0 1px 4px 2px rgba(11,11,9,0.7);
   position: relative;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
 
   @include respond(xlg-phone) {
     padding-top: 15rem;
@@ -21,13 +21,17 @@
   @include respond(laptop) {
     background-position: center center;
     padding-top: 22.5rem;
-    justify-content: center;
+    // justify-content: center;
   }
 
   // .home__content p:first-child
   &__content p:first-child {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
+
+    @include respond(laptop) {
+      font-size: 8rem;
+    }
 
     @include respond(desktop) {
       font-size: 10rem;
@@ -36,28 +40,25 @@
   
   // .home__content p:not(:first-child)
   &__content p:not(:first-child) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     max-width: 95vw;
     margin: 0 auto;
     line-height: 1.4;
     margin-top: 1rem;
 
     @include respond(xlg-phone) {
-      font-size: 1.8rem;
+      font-size: 2rem;
       max-width: 90vw;
     }
 
     @include respond (tablet) {
-      font-size: 2rem;
+      font-size: 2.2rem;
       max-width: 80vw;
     }
 
     @include respond(laptop) {
-      max-width: 80vw;
-    }
-
-    @include respond(desktop) {
       font-size: 4rem;
+      max-width: 80vw;
     }
   }
   

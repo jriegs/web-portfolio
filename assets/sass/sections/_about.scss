@@ -15,6 +15,10 @@
     background-position: 15% 80%;
   }
 
+  @include respond(desktop) {
+    background-position: bottom center;
+  }
+
   .responsive-grid {
     @include respond(laptop) {
       align-items: center;

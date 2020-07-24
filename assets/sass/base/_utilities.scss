@@ -8,7 +8,11 @@ img:not(.non-responsive) {
 }
 
 .bottom-margin {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  @include respond(xlg-phone) {
+    margin-bottom: 3rem;
+  }
 }
 
 .vertical-padding {
