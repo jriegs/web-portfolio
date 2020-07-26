@@ -16,7 +16,25 @@ class HeaderScroll {
 
 class mobileMenu {
   constructor() {
-    
+    const menuBtn = document.querySelector('.js-menu');
+    const menuList = document.querySelector('.nav__list');
+
+    menuBtn.addEventListener('click', this.menuHandler);
+    menuList.addEventListener('click', this.closeMenuHandler);
+  }
+
+  menuHandler() {
+    const menuList = document.querySelector('.nav__list');
+    const header = document.querySelector('header');
+
+    menuList.classList.toggle('nav__list--mobile');
+    header.classList.add('header--scroll');
+  }
+
+  closeMenuHandler() {
+    const menuList = document.querySelector('.nav__list');
+
+    menuList.classList.remove('nav__list--mobile');
   }
 }
 
@@ -42,8 +60,9 @@ class App {
   constructor() {}
 
   static init() {
-      new HeaderScroll();
-      new Modal();
+    new HeaderScroll();
+    new mobileMenu();
+    new Modal();
   }
 }
 

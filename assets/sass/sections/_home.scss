@@ -26,8 +26,12 @@
 
   // .home__content p:first-child
   &__content p:first-child {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bold;
+
+    @include respond(xlg-phone) {
+      font-size: 5rem;
+    }
 
     @include respond(laptop) {
       font-size: 8rem;

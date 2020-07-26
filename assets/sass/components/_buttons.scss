@@ -4,7 +4,7 @@
   font-weight: bold;
   font-size: 2.5rem;
   text-decoration: none;
-  padding: 1rem;
+  padding: 2rem 3.5rem;
   border: 3px solid;
   border-radius: 8px;
   transition: all 0.3s;
@@ -31,14 +31,14 @@
 }
 
 .icon {
-  height: 30px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   margin-right: 10px;
   transition: all 0.3s;
 
-  @include respond(tablet) {
-    height: 40px;
-    width: 40px;
+  @include respond(xlg-phone) {
+    height: 4rem;
+    width: 4rem;
   }
 
   &--primary {

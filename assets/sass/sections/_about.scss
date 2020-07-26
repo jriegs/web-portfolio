@@ -89,7 +89,12 @@
     }
 
     @include respond(laptop) {
+      font-size: 4rem;
       text-align: left;
+    }
+
+    @include respond(mid-desktop) {
+      font-size: 5rem;
     }
   }
   
@@ -104,6 +109,10 @@
 
     @include respond(laptop) {
       text-align: left;
+    }
+
+    @include respond(mid-desktop) {
+      font-size: 2rem;
     }
   }
 }

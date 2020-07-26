@@ -2,13 +2,14 @@
 0 - 600px : Phone
 600-900: Phone/Tablet
 900-1200px: Tablet
-1200-1800px: Laptop
+1200-1800px: Laptop/Desktop
 1800px +: Desktop
 
 $breakpoint choices:
 - large phone 
 - tablet
 - laptop
+- mid desktop
 - desktop
 
 ORDER: Base + typography > general layout + grid > page layout + components
@@ -66,7 +67,7 @@ img:not(.non-responsive) {
   font-weight: bold;
   font-size: 2.5rem;
   text-decoration: none;
-  padding: 1rem;
+  padding: 2rem 3.5rem;
   border: 3px solid;
   border-radius: 8px;
   transition: all 0.3s; }
@@ -84,14 +85,14 @@ img:not(.non-responsive) {
       fill: #9c3804; }
 
 .icon {
-  height: 30px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   margin-right: 10px;
   transition: all 0.3s; }
-  @media only screen and (min-width: 56.25em) {
+  @media only screen and (min-width: 37.5em) {
     .icon {
-      height: 40px;
-      width: 40px; } }
+      height: 4rem;
+      width: 4rem; } }
   .icon--primary {
     fill: #F96F27; }
 
@@ -202,7 +203,7 @@ img:not(.non-responsive) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -212,6 +213,12 @@ img:not(.non-responsive) {
   .header .logo {
     max-width: 130px;
     transition: max-width .3s ease-out; }
+    @media only screen and (min-width: 37.5em) {
+      .header .logo {
+        max-width: 150px; } }
+    @media only screen and (min-width: 56.25em) {
+      .header .logo {
+        max-width: 180px; } }
     @media only screen and (min-width: 75em) {
       .header .logo {
         max-width: 250px; } }
@@ -224,8 +231,14 @@ img:not(.non-responsive) {
   background: rgba(0, 0, 0, 0.9);
   transition: background 0.3s ease-in; }
   .header--scroll .logo {
-    max-width: 70px;
+    max-width: 80px;
     transition: max-width 0.3s ease-in; }
+    @media only screen and (min-width: 37.5em) {
+      .header--scroll .logo {
+        max-width: 100px; } }
+    @media only screen and (min-width: 56.25em) {
+      .header--scroll .logo {
+        max-width: 120px; } }
     @media only screen and (min-width: 75em) {
       .header--scroll .logo {
         max-width: 160px; } }
@@ -271,39 +284,75 @@ img:not(.non-responsive) {
   order: 2; }
 
 .nav__menu-icon {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #fff; }
   @media only screen and (min-width: 56.25em) {
     .nav__menu-icon {
       display: none; } }
 
 .nav__list {
+  background: #111;
   list-style: none;
-  display: none; }
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: -1; }
+  .nav__list--mobile {
+    border-bottom: 2px solid #0a0a0a;
+    box-shadow: 0 5px 6px 2px rgba(15, 15, 15, 0.6);
+    height: 25rem; }
   @media only screen and (min-width: 56.25em) {
     .nav__list {
-      display: flex; } }
+      display: flex;
+      background: none;
+      height: auto;
+      position: static; } }
 
-.nav__item {
-  padding: 10px; }
+@media only screen and (min-width: 56.25em) {
+  .nav__item {
+    padding: 1rem 1.5rem; } }
 
 .nav__link {
+  border-bottom: 2.5px solid #1f1f1f;
+  padding: 2rem;
   font-size: 1.5rem;
   color: #fff;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media only screen and (min-width: 56.25em) {
+    .nav__link {
+      border-bottom: 0 none;
+      padding: 0;
+      font-size: 2rem;
+      justify-content: flex-start; } }
   @media only screen and (min-width: 75em) {
     .nav__link {
-      font-size: 2rem; } }
+      font-size: 2.5rem; } }
   .nav__link:hover {
     color: #F96F27; }
   .nav__link:hover .nav__icon {
     fill: #F96F27; }
 
 .nav__icon {
-  height: 20px;
-  width: 20px;
-  fill: #fff; }
+  height: 2rem;
+  width: 2rem;
+  fill: #fff;
+  margin-right: 1rem;
+  order: 2; }
+  @media only screen and (min-width: 56.25em) {
+    .nav__icon {
+      order: 0; } }
+  @media only screen and (min-width: 75em) {
+    .nav__icon {
+      height: 2.5rem;
+      width: 2.5rem; } }
 
 .about {
   background: url(https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
@@ -370,7 +419,11 @@ img:not(.non-responsive) {
         font-size: 3rem; } }
     @media only screen and (min-width: 75em) {
       .about__header {
+        font-size: 4rem;
         text-align: left; } }
+    @media only screen and (min-width: 93.75em) {
+      .about__header {
+        font-size: 5rem; } }
   .about__text {
     font-size: 1.6rem;
     text-align: justify; }
@@ -380,6 +433,9 @@ img:not(.non-responsive) {
     @media only screen and (min-width: 75em) {
       .about__text {
         text-align: left; } }
+    @media only screen and (min-width: 93.75em) {
+      .about__text {
+        font-size: 2rem; } }
 
 .contact {
   background: #434E50;
@@ -429,8 +485,11 @@ img:not(.non-responsive) {
       background-position: center center;
       padding-top: 22.5rem; } }
   .home__content p:first-child {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bold; }
+    @media only screen and (min-width: 37.5em) {
+      .home__content p:first-child {
+        font-size: 5rem; } }
     @media only screen and (min-width: 75em) {
       .home__content p:first-child {
         font-size: 8rem; } }
@@ -499,7 +558,16 @@ img:not(.non-responsive) {
     justify-content: space-between; }
     @media only screen and (min-width: 56.25em) {
       .portfolio__content {
+        padding: 2rem 4rem 4rem; } }
+    @media only screen and (min-width: 75em) {
+      .portfolio__content {
+        padding: 2rem 3rem; } }
+    @media only screen and (min-width: 93.75em) {
+      .portfolio__content {
         padding: 4rem; } }
+    @media only screen and (min-width: 112.5em) {
+      .portfolio__content {
+        padding: 5rem; } }
   .portfolio__header {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -513,6 +581,13 @@ img:not(.non-responsive) {
     @media only screen and (min-width: 75em) {
       .portfolio__header {
         text-align: left; } }
+    @media only screen and (min-width: 93.75em) {
+      .portfolio__header {
+        font-size: 4rem; } }
+    @media only screen and (min-width: 93.75em) {
+      .portfolio__header {
+        font-size: 4.5rem;
+        margin-bottom: 3rem; } }
   .portfolio__desc {
     font-size: 1.4rem;
     line-height: 1.4;
@@ -522,7 +597,14 @@ img:not(.non-responsive) {
         font-size: 1.6rem; } }
     @media only screen and (min-width: 75em) {
       .portfolio__desc {
+        font-size: 1.7rem;
         text-align: left; } }
+    @media only screen and (min-width: 93.75em) {
+      .portfolio__desc {
+        font-size: 1.8rem; } }
+    @media only screen and (min-width: 112.5em) {
+      .portfolio__desc {
+        font-size: 2rem; } }
   .portfolio__link {
     font-size: 1.8rem;
     color: #F96F27;
@@ -533,8 +615,13 @@ img:not(.non-responsive) {
     text-align: center; }
     @media only screen and (min-width: 75em) {
       .portfolio__link {
+        font-size: 2rem;
         padding: 10px;
         text-align: left; } }
+    @media only screen and (min-width: 93.75em) {
+      .portfolio__link {
+        font-size: 2.5rem;
+        padding: 10px 15px; } }
   .portfolio__link::after {
     content: '';
     position: absolute;

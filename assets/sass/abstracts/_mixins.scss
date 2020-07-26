@@ -2,13 +2,14 @@
 0 - 600px : Phone
 600-900: Phone/Tablet
 900-1200px: Tablet
-1200-1800px: Laptop
+1200-1800px: Laptop/Desktop
 1800px +: Desktop
 
 $breakpoint choices:
 - large phone 
 - tablet
 - laptop
+- mid desktop
 - desktop
 
 ORDER: Base + typography > general layout + grid > page layout + components
@@ -17,23 +18,28 @@ ORDER: Base + typography > general layout + grid > page layout + components
 */
 @mixin respond($breakpoint) {
   @if  $breakpoint == xlg-phone {
-      @media only screen and (min-width: 37.5em) { //600px
-          @content
-      };
+    @media only screen and (min-width: 37.5em) { //600px
+        @content
+    };
   }
   @if  $breakpoint == tablet {
-      @media only screen and (min-width: 56.25em) { //900px
-          @content
-      };
+    @media only screen and (min-width: 56.25em) { //900px
+        @content
+    };
   }
   @if  $breakpoint == laptop {
-      @media only screen and (min-width: 75em) { //1200px
-          @content
-      };
+    @media only screen and (min-width: 75em) { //1200px
+        @content
+    };
+  }
+  @if $breakpoint == mid-desktop {
+    @media only screen and (min-width: 93.75em) { //1500px
+        @content
+    };
   }
   @if  $breakpoint == desktop {
-      @media only screen and (min-width: 112.5em) { //1800px
-          @content
-      };
+    @media only screen and (min-width: 112.5em) { //1800px
+        @content
+    };
   }
 }

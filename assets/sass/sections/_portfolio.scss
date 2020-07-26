@@ -58,7 +58,19 @@
     justify-content: space-between;
 
     @include respond(tablet) {
+      padding: 2rem 4rem 4rem;
+    }
+
+    @include respond(laptop) {
+      padding: 2rem 3rem;
+    }
+
+    @include respond(mid-desktop) {
       padding: 4rem;
+    }
+
+    @include respond(desktop) {
+      padding: 5rem;
     }
   }
 
@@ -79,6 +91,15 @@
     @include respond(laptop) {
       text-align: left;
     }
+
+    @include respond(mid-desktop) {
+      font-size: 4rem;
+    }
+
+    @include respond(mid-desktop) {
+      font-size: 4.5rem;
+      margin-bottom: 3rem;
+    }
   }
 
   // .portfolio__desc
@@ -92,7 +113,16 @@
     }
 
     @include respond(laptop) {
+      font-size: 1.7rem;
       text-align: left;
+    }
+
+    @include respond(mid-desktop) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 2rem;
     }
   }
   
@@ -107,8 +137,14 @@
     text-align: center;
 
     @include respond(laptop) {
+      font-size: 2rem;
       padding: 10px;
       text-align: left;
+    }
+
+    @include respond(mid-desktop) {
+      font-size: 2.5rem;
+      padding: 10px 15px;
     }
   }
   
