@@ -356,6 +356,7 @@ img:not(.non-responsive) {
 
 .about {
   background: url(/assets/images/bg/jrwc-about-bg.jpg) no-repeat;
+  background: url(/web-portfolio/assets/images/bg/jrwc-about-bg.jpg) no-repeat;
   background-size: cover;
   background-position: left center;
   position: relative;
@@ -476,6 +477,7 @@ img:not(.non-responsive) {
 .home {
   text-align: center;
   background: url(/assets/images/bg/dark-hero-bg.jpg) no-repeat;
+  background: url(/web-portfolio/assets/images/bg/dark-hero-bg.jpg) no-repeat;
   background-position: top left;
   color: #fff;
   background-size: cover;
