@@ -1,5 +1,5 @@
 .about {
-  background: url(https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+  background: url(/assets/images/bg/jrwc-about-bg.jpg) no-repeat;
   background-size: cover;
   background-position: left center;
   position: relative;
@@ -11,8 +11,8 @@
   }
 
   @include respond(laptop) {
-    background-size: auto;
-    background-position: 15% 80%;
+    background-size: cover;
+    background-position: 100% 100%;
   }
 
   @include respond(desktop) {
@@ -113,6 +113,23 @@
 
     @include respond(mid-desktop) {
       font-size: 2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // .about__link 
+  &__link {
+    color: color(primary);
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    margin-bottom: 3px;
+    transition: all 0.2s;
+
+    &:hover {
+      border-bottom: 2px solid;
     }
   }
 }
