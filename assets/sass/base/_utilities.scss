@@ -7,6 +7,10 @@ img:not(.non-responsive) {
   display: none !important;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .bottom-margin {
   margin-bottom: 2rem;
 

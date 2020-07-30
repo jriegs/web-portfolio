@@ -44,6 +44,9 @@ img:not(.non-responsive) {
 .hide {
   display: none !important; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .bottom-margin {
   margin-bottom: 2rem; }
   @media only screen and (min-width: 37.5em) {

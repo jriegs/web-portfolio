@@ -29,12 +29,14 @@ class mobileMenu {
 
     menuList.classList.toggle('nav__list--mobile');
     header.classList.add('header--scroll');
+    document.body.classList.toggle('no-scroll');
   }
 
   closeMenuHandler() {
     const menuList = document.querySelector('.nav__list');
 
     menuList.classList.remove('nav__list--mobile');
+    document.body.classList.remove('no-scroll');
   }
 }
 
