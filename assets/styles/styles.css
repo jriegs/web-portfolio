@@ -65,6 +65,9 @@ img:not(.non-responsive) {
       padding-top: 7.5vw;
       padding-bottom: 7.5vw; } }
 
+.text-center {
+  text-align: center !important; }
+
 .text-shadow-blk {
   text-shadow: 1px 1px 2px #000; }
 
@@ -300,8 +303,9 @@ img:not(.non-responsive) {
   color: #fff;
   cursor: pointer;
   padding-top: 8px;
-  position: relative; }
-  .nav__menu-icon:hover {
+  position: relative;
+  transition: all 0.3s; }
+  .nav__menu-icon:hover, .nav__menu-icon--active {
     color: #F96F27; }
   .nav__menu-icon::before {
     content: '';
@@ -497,7 +501,7 @@ img:not(.non-responsive) {
     justify-content: center;
     flex-direction: column;
     padding: 0 10px;
-    overflow: scroll; }
+    overflow: auto; }
   .contact__modal-bg {
     position: absolute;
     top: 0;
@@ -577,6 +581,8 @@ img:not(.non-responsive) {
     .portfolio .responsive-grid {
       grid-template-columns: repeat(auto-fit, minmax(90rem, 1fr));
       gap: 4rem; } }
+  .portfolio__header--main {
+    color: #f1f1f1; }
   .portfolio__project {
     background: #434E50;
     margin-bottom: 2rem;

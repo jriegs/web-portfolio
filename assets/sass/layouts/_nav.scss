@@ -5,8 +5,10 @@
     cursor: pointer;
     padding-top: 8px;
     position: relative;
+    transition: all 0.3s;
 
-    &:hover {
+    &:hover,
+    &--active {
       color: color(primary);
     }
 
@@ -61,7 +63,6 @@
 
   // .nav__item
   &__item {
-
     @include respond(tablet) {
       padding: 1rem 1.5rem;
     }

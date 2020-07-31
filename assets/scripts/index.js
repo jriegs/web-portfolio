@@ -24,17 +24,21 @@ class mobileMenu {
   }
 
   menuHandler() {
+    const menuBtn = document.querySelector('.js-menu');
     const menuList = document.querySelector('.nav__list');
     const header = document.querySelector('header');
 
+    menuBtn.classList.toggle('nav__menu-icon--active');
     menuList.classList.toggle('nav__list--mobile');
     header.classList.add('header--scroll');
     document.body.classList.toggle('no-scroll');
   }
 
   closeMenuHandler() {
+    const menuBtn = document.querySelector('.js-menu');
     const menuList = document.querySelector('.nav__list');
 
+    menuBtn.classList.remove('nav__menu-icon--active');
     menuList.classList.remove('nav__list--mobile');
     document.body.classList.remove('no-scroll');
   }
