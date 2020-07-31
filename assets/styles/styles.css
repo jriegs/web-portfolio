@@ -392,11 +392,11 @@ img:not(.non-responsive) {
   color: #f1f1f1; }
   @media only screen and (min-width: 56.25em) {
     .about {
-      background-position: bottom center; } }
+      background-position: 15% 50%; } }
   @media only screen and (min-width: 75em) {
     .about {
       background-size: cover;
-      background-position: 100% 100%; } }
+      background-position: 0% 50%; } }
   @media only screen and (min-width: 112.5em) {
     .about {
       background-position: bottom center; } }
