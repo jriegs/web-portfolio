@@ -68,7 +68,7 @@ img:not(.non-responsive) {
   display: flex;
   align-items: center;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-decoration: none;
   padding: 2rem 3.5rem;
   border: 3px solid;
@@ -76,10 +76,10 @@ img:not(.non-responsive) {
   transition: all 0.3s; }
   @media only screen and (min-width: 37.5em) {
     .btn {
-      font-size: 3.5rem; } }
+      font-size: 3rem; } }
   @media only screen and (min-width: 75em) {
     .btn {
-      font-size: 4.5rem; } }
+      font-size: 4rem; } }
   .btn--primary {
     color: #F96F27; }
     .btn--primary:hover {
@@ -113,32 +113,37 @@ img:not(.non-responsive) {
     position: absolute;
     top: 15px;
     right: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #F96F27;
     cursor: pointer; }
   .form__header {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
     color: #F96F27; }
+    @media only screen and (min-width: 37.5em) {
+      .form__header {
+        font-size: 3rem; } }
   .form__label {
     display: none;
     /* add style to display on input focus */ }
   .form__input, .form__textarea {
     width: 100%;
-    padding: .5rem;
+    padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     border: 0 none;
-    font-size: 1.2rem; }
+    font-size: 1.6rem; }
   .form__textarea {
-    height: 6rem; }
+    height: 6rem;
+    margin-bottom: 1.5rem; }
   .form__submit-btn {
     background: orange;
     border: 0 none;
     width: 100%;
-    padding: .75rem 2rem;
+    padding: 1rem 2.5rem;
     border-radius: 5px;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #222;
     font-weight: bold; }
 
@@ -315,7 +320,7 @@ img:not(.non-responsive) {
 .nav__list {
   list-style: none;
   height: 0;
-  overflow: hidden;
+  overflow: scroll;
   transition: all 0.3s;
   position: absolute;
   top: 52px;
@@ -324,12 +329,13 @@ img:not(.non-responsive) {
   z-index: -1; }
   .nav__list--mobile {
     background: rgba(17, 17, 17, 0.85);
-    height: 100vh; }
+    height: calc(100vh - 52px); }
   @media only screen and (min-width: 56.25em) {
     .nav__list {
       display: flex;
       background: none;
       height: auto;
+      overflow: auto;
       position: static; } }
 
 @media only screen and (min-width: 56.25em) {

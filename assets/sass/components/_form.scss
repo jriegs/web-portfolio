@@ -14,6 +14,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: color(primary);
     cursor: pointer;
@@ -21,9 +22,13 @@
   
   // .form__header
   &__header {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
     color: color(primary);
+
+    @include respond(xlg-phone) {
+      font-size: 3rem;
+    }
   }
   
   // .form__label
@@ -36,16 +41,17 @@
   &__input,
   &__textarea {
     width: 100%;
-    padding: .5rem;
+    padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     border: 0 none;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   
   // .form__textarea
   &__textarea {
     height: 6rem;
+    margin-bottom: 1.5rem;
   }
   
   // .form__submit-btn
@@ -53,9 +59,9 @@
     background: orange;
     border: 0 none;
     width: 100%;
-    padding: .75rem 2rem;
+    padding: 1rem 2.5rem;
     border-radius: 5px;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: color(gray-2);
     font-weight: bold;
   }

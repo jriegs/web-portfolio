@@ -37,7 +37,7 @@
   &__list {
     list-style: none;
     height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: all 0.3s;
     position: absolute;
     top: 52px;
@@ -47,13 +47,14 @@
 
     &--mobile  {
       background: rgba(color(gray-1), 0.85);
-      height: 100vh;
+      height: calc(100vh - 52px);
     }
 
     @include respond(tablet) {
       display: flex;
       background: none;
       height: auto;
+      overflow: auto;
       position: static;
     }
   }
