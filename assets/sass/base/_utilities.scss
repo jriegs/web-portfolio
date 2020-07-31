@@ -20,8 +20,13 @@ img:not(.non-responsive) {
 }
 
 .vertical-padding {
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+  padding-top: 20vw;
+  padding-bottom: 20vw;
+
+  @include respond(tablet) {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
 
   @include respond(desktop) {
     padding-top: 7.5vw;

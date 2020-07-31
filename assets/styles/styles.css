@@ -54,8 +54,12 @@ img:not(.non-responsive) {
       margin-bottom: 3rem; } }
 
 .vertical-padding {
-  padding-top: 10vw;
-  padding-bottom: 10vw; }
+  padding-top: 20vw;
+  padding-bottom: 20vw; }
+  @media only screen and (min-width: 56.25em) {
+    .vertical-padding {
+      padding-top: 10vw;
+      padding-bottom: 10vw; } }
   @media only screen and (min-width: 112.5em) {
     .vertical-padding {
       padding-top: 7.5vw;
@@ -492,7 +496,8 @@ img:not(.non-responsive) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 10px; }
+    padding: 0 10px;
+    overflow: scroll; }
   .contact__modal-bg {
     position: absolute;
     top: 0;

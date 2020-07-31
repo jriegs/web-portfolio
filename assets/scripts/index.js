@@ -6,7 +6,7 @@ class HeaderScroll {
   scrollHandler() {
     const header = document.querySelector('header');
 
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       header.classList.add('header--scroll');
     } else {
       header.classList.remove('header--scroll');
@@ -43,10 +43,12 @@ class mobileMenu {
 class Modal {
   constructor() {
       const contactBtn = document.querySelector('.js-contact-btn');
+      const messageLink = document.querySelector('.js-contact-link');
       const backdrop = document.querySelector('.contact__modal-bg');
       const x = document.querySelector('.form__close');
 
       contactBtn.addEventListener('click', this.toggleModal);
+      messageLink.addEventListener('click', this.toggleModal);
       backdrop.addEventListener('click', this.toggleModal);
       x.addEventListener('click', this.toggleModal);
   }
@@ -55,6 +57,7 @@ class Modal {
     e.preventDefault();
     const modal = document.querySelector('.contact__modal');
     modal.classList.toggle('hide');
+    document.body.classList.toggle('no-scroll');
   }
 }
 
