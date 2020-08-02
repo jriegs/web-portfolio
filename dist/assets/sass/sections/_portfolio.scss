@@ -1,5 +1,6 @@
 .portfolio {
   background: color(secondary);
+  flex-direction: column;
 
   @include respond(xlg-phone) {
     padding-left: 5vw;
@@ -16,10 +17,6 @@
       grid-template-columns: repeat(auto-fit, minmax(90rem, 1fr));
       gap: 4rem;
     } 
-  }
-
-  &__header--main {
-    color: color(white-2);
   }
 
   // .portfolio__project
@@ -104,6 +101,11 @@
       font-size: 4.5rem;
       margin-bottom: 3rem;
     }
+  }
+
+  &__header--main {
+    color: color(white-2);
+    margin-bottom: 5rem;
   }
 
   // .portfolio__desc

@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hi, my name is Julian Riegler and I'm a front-end web developer. I love coding fun interactive websites. Come browse my online portfolio to see my recent work.">
   <title>JR Web Creations</title>
+  
   <link rel="stylesheet" href="assets/styles/styles.css">
   <script src="assets/scripts/index.js" defer></script>
 </head>
@@ -73,8 +75,8 @@
     </section>
     <!-- portfolio start -->
     <section id="portfolio" class="portfolio flex-center full-height vertical-padding">
+      <h2 class="portfolio__header portfolio__header--main text-center text-shadow-blk">Glorious Portfolio Examples</h2>
       <div class="container responsive-grid">
-        <h2 class="portfolio__header portfolio__header--main text-center text-shadow-blk">Glorious Portfolio Examples</h2>
         <!-- portfolio project 1 start -->
         
           <div class="portfolio__project responsive-grid">
@@ -88,7 +90,7 @@
                   This website was for a client who had started a new business and needed to begin establishing their online presence. I worked with them in getting the website live within a few short weeks. While going through plenty of updates and new designs, her website has helped the business grow and continue to go strong.
                 </p>
               </div>
-              <a href="https://www.urharmony.com/" class="portfolio__link text-shadow-blk" target="_blank">
+              <a href="https://www.urharmony.com/" class="portfolio__link text-shadow-blk" target="_blank" rel="noopener">
                 View Project
               </a>
             </div>
@@ -110,7 +112,7 @@
                   At the time of this project, I was working on learning and improving my understanding of javascript frameworks. The web app using Vue and firebase, is a basic demo of stock trading and focused more on the functionality than the look of the site. Though leaving out a lot of the complexities of an actual stock trader app, it still allows for a cool simulated experience of building a lucrative stock portfolio and going through the ups and downs of the day-to-day stock market (beware of extreme price flucuation).
                 </p>
               </div>
-              <a href="http://vuejs-stockdeploy.s3-website.us-east-2.amazonaws.com/" class="portfolio__link text-shadow-blk" target="_blank">
+              <a href="http://vuejs-stockdeploy.s3-website.us-east-2.amazonaws.com/" class="portfolio__link text-shadow-blk" target="_blank" rel="noopener">
                 View Project
               </a>
             </div>
@@ -132,7 +134,7 @@
                   When you like to travel, finding new destinations to explore can be hard. This website serves as a cool interactive landing page for finding random places to go. This might not be a real business but hey you'd sure think so with such an awesome website.
                 </p>
               </div>
-              <a href="https://jriegs.github.io/git-gud/" class="portfolio__link text-shadow-blk" target="_blank">
+              <a href="https://jriegs.github.io/git-gud/" class="portfolio__link text-shadow-blk" target="_blank" rel="noopener"> 
                 View Project
               </a>
             </div>
@@ -154,7 +156,7 @@
                   Just writing down a list of favorite movies can be boring. It's a lot more exciting when you can see a visual example by creating a collection of movies and even being able to rate them. This website gives you the chance to be the movie critic of great esteem you always wanted to be, or at least you can pretend that's the case.
                 </p>
               </div>
-              <a href="https://jriegs.github.io/favorite-movies/" class="portfolio__link text-shadow-blk" target="_blank">
+              <a href="https://jriegs.github.io/favorite-movies/" class="portfolio__link text-shadow-blk" target="_blank" rel="noopener">
                 View Project
               </a>
             </div>
@@ -184,7 +186,7 @@
               <strong>Web Development and Design</strong> is where my passion lies. I first discovered my love for it as 17 year old in high school and decided to pursue a career as a <strong>Web Developer</strong>. 2013 was when I graduated with a degree in Web Development and Design. Shortly after, I landed my first job in the IT field and have been working as a <strong>Professional Web Developer</strong> ever since.
             </p>
             <p class="about__text text-shadow-blk">
-              Forget about the above for now though, what you care most about is, what can I bring to the table? If you haven't looked at <a class="about__link" href="#portfolio">My Projects</a> yet, do yourself a favor and check them out. You can browse <a class="about__link" href="https://github.com/jriegs" target="_blank">My Github</a> as well for a close up look at the code (in case anyone wants to get their nerd on).
+              Forget about the above for now though, what you care most about is, what can I bring to the table? If you haven't looked at <a class="about__link" href="#portfolio">My Projects</a> yet, do yourself a favor and check them out. You can browse <a class="about__link" href="https://github.com/jriegs" target="_blank" rel="noopener">My Github</a> as well for a close up look at the code (in case anyone wants to get their nerd on).
             </p>
             <p class="about__text text-shadow-blk">
               Concerning where my expertise in Web Development lies, I'm mainly focused on the <strong>Front-End skills of HTML, CSS + Sass,</strong> and <strong>JavaScript</strong> though I also dabble with some Back-End skills such as <strong>Node, MongoDB,</strong> and even <strong>PHP</strong>. Including JavaScript libraries/frameworks and build tools I'm also experienced with <strong>jQuery, Axios, Vue, Express, Gulp, Babel, ESLint,</strong> and <strong>Webpack</strong> to name a few. 
@@ -208,20 +210,20 @@
       <div class="contact__modal hide">
         <div class="contact__modal-bg"></div>
         <!-- contact form start -->
-        <form class="form" action="#">
+        <form class="form" name="contact-jrwc" method="POST" netlify>
           <div class="form__close">X</div>
           <h3 class="form__header text-center">Get in Touch</h3>
           <div class="form__field-group">
             <label class="form__label" for="">Full Name</label>
-            <input class="form__input" type="text" placeholder="Full Name">
+            <input class="form__input" type="text" name="fullName" placeholder="Full Name">
           </div>
           <div class="form__field-group">
             <label class="form__label" for="">Email</label>
-            <input class="form__input" type="email" placeholder="example@email.com">
+            <input class="form__input" type="email" name="email" placeholder="example@email.com">
           </div>
           <div class="form__field-group">
             <label class="form__label" for="">Message</label>
-            <textarea class="form__textarea" placeholder="Message..."></textarea>
+            <textarea class="form__textarea" name="message" placeholder="Message..."></textarea>
           </div>
           <input class="form__submit-btn" type="submit" value="Send">
         </form>
@@ -234,17 +236,17 @@
   <!-- footer start -->
   <footer class="footer">
     <div class="footer__icons">
-      <a href="https://github.com/jriegs" class="footer__icon-link" target="_blank">
+      <a href="https://github.com/jriegs" class="footer__icon-link" target="_blank" rel="noopener">
         <svg class="footer__icon">
           <use xlink:href="assets/images/sprite.svg#icon-github"></use>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/julian-riegler-257a5a58/" class="footer__icon-link" target="_blank">
+      <a href="https://www.linkedin.com/in/julian-riegler-257a5a58/" class="footer__icon-link" target="_blank" rel="noopener">
         <svg class="footer__icon">
           <use xlink:href="assets/images/sprite.svg#icon-linkedin2"></use>
         </svg>
       </a>
-      <a href="mailto:julian@jrwebcreations.com" class="footer__icon-link" target="_blank">
+      <a href="mailto:julian@jrwebcreations.com" class="footer__icon-link" target="_blank" rel="noopener">
         <svg class="footer__icon">
           <use xlink:href="assets/images/sprite.svg#icon-google"></use>
         </svg>

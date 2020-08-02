@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass assets/sass/main.scss assets/styles/styles.css -w",
+    "watch:sass": "node-sass dist/assets/sass/main.scss dist/assets/styles/styles.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass assets/sass/main.scss assets/styles/styles.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/styles/styles.comp.css -o assets/styles/styles.prefix.css",
-    "compress:css": "node-sass assets/styles/styles.prefix.css assets/styles/styles.css --output-style compressed",
+    "compile:sass": "node-sass dist/assets/sass/main.scss dist/assets/styles/styles.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/assets/styles/styles.comp.css -o dist/assets/styles/styles.prefix.css",
+    "compress:css": "node-sass dist/assets/styles/styles.prefix.css dist/assets/styles/styles.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "keywords": [],

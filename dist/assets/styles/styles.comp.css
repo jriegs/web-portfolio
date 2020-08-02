@@ -392,7 +392,6 @@ img:not(.non-responsive) {
 
 .about {
   background: url(/assets/images/bg/jrwc-about-bg.jpg) no-repeat;
-  background: url(/web-portfolio/assets/images/bg/jrwc-about-bg.jpg) no-repeat;
   background-size: cover;
   background-position: left center;
   position: relative;
@@ -514,7 +513,6 @@ img:not(.non-responsive) {
 .home {
   text-align: center;
   background: url(/assets/images/bg/dark-hero-bg.jpg) no-repeat;
-  background: url(/web-portfolio/assets/images/bg/dark-hero-bg.jpg) no-repeat;
   background-position: top left;
   color: #fff;
   background-size: cover;
@@ -568,7 +566,8 @@ img:not(.non-responsive) {
     background: rgba(15, 15, 15, 0.6); }
 
 .portfolio {
-  background: #7d9195; }
+  background: #7d9195;
+  flex-direction: column; }
   @media only screen and (min-width: 37.5em) {
     .portfolio {
       padding-left: 5vw;
@@ -581,8 +580,6 @@ img:not(.non-responsive) {
     .portfolio .responsive-grid {
       grid-template-columns: repeat(auto-fit, minmax(90rem, 1fr));
       gap: 4rem; } }
-  .portfolio__header--main {
-    color: #f1f1f1; }
   .portfolio__project {
     background: #434E50;
     margin-bottom: 2rem;
@@ -639,6 +636,9 @@ img:not(.non-responsive) {
       .portfolio__header {
         font-size: 4.5rem;
         margin-bottom: 3rem; } }
+  .portfolio__header--main {
+    color: #f1f1f1;
+    margin-bottom: 5rem; }
   .portfolio__desc {
     font-size: 1.4rem;
     line-height: 1.4;
