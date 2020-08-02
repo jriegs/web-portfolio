@@ -1,47 +1,74 @@
-class HeaderScroll {
+class Header {
   constructor() {
+    const menuBtn = document.querySelector('.js-menu');
+    const menuList = document.querySelector('.nav__list');
+    
     window.addEventListener('scroll', this.scrollHandler);
+    window.addEventListener('load', this.scrollHandler);
+    menuBtn.addEventListener('click', this.menuHandler);
+    menuList.addEventListener('click', this.closeMenu);
+  }
+
+  static addScroll() {
+    const header = document.querySelector('header');
+    header.classList.add('header--scroll');
+  }
+
+  static removeScroll() {
+    const header = document.querySelector('header');
+    header.classList.remove('header--scroll');
+  }
+
+}
+
+class Scroll extends Header {
+  constructor() {
+    super();
   }
 
   scrollHandler() {
-    const header = document.querySelector('header');
-
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      header.classList.add('header--scroll');
+    if (document.documentElement.scrollTop > 10) {
+      Header.addScroll();
     } else {
-      header.classList.remove('header--scroll');
+      Header.removeScroll();
     }
   }
+
 }
 
-class mobileMenu {
+class mobileMenu extends Header {
   constructor() {
-    const menuBtn = document.querySelector('.js-menu');
-    const menuList = document.querySelector('.nav__list');
-
-    menuBtn.addEventListener('click', this.menuHandler);
-    menuList.addEventListener('click', this.closeMenuHandler);
+    super();
   }
 
   menuHandler() {
+    const header = document.querySelector('header');
     const menuBtn = document.querySelector('.js-menu');
     const menuList = document.querySelector('.nav__list');
-    const header = document.querySelector('header');
 
     menuBtn.classList.toggle('nav__menu-icon--active');
     menuList.classList.toggle('nav__list--mobile');
-    header.classList.add('header--scroll');
     document.body.classList.toggle('no-scroll');
+
+    if (!header.classList.contains('header--scroll')) {
+      Header.addScroll();
+    } else if (!menuBtn.classList.contains('nav__menu-icon--active') && document.documentElement.scrollTop < 10) {
+      Header.removeScroll();
+    }
+    
   }
 
-  closeMenuHandler() {
+  closeMenu() {
     const menuBtn = document.querySelector('.js-menu');
     const menuList = document.querySelector('.nav__list');
 
     menuBtn.classList.remove('nav__menu-icon--active');
     menuList.classList.remove('nav__list--mobile');
     document.body.classList.remove('no-scroll');
+    if (document.documentElement.scrollTop < 10)
+    Header.removeScroll();
   }
+
 }
 
 class Modal {
@@ -63,13 +90,14 @@ class Modal {
     modal.classList.toggle('hide');
     document.body.classList.toggle('no-scroll');
   }
+  
 }
 
 class App {
   constructor() {}
 
   static init() {
-    new HeaderScroll();
+    new Scroll();
     new mobileMenu();
     new Modal();
   }

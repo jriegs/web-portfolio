@@ -243,7 +243,7 @@ img:not(.non-responsive) {
 
 .header--scroll {
   box-shadow: 0 2px 3px 3px rgba(99, 16, 30, 0.2);
-  background: rgba(34, 34, 34, 0.9);
+  background: rgba(34, 34, 34, 0.95);
   transition: background 0.3s ease-in; }
   .header--scroll .logo {
     max-width: 80px;
