@@ -27,7 +27,7 @@
   }
 
   // .home__content p:first-child
-  &__content p:first-child {
+  &__header {
     font-size: 4.5rem;
     font-weight: bold;
 
@@ -45,7 +45,7 @@
   }
   
   // .home__content p:not(:first-child)
-  &__content p:not(:first-child) {
+  &__text {
     font-size: 1.8rem;
     max-width: 95vw;
     margin: 0 auto;
