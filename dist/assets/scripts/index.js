@@ -78,15 +78,26 @@ class Modal {
       const backdrop = document.querySelector('.contact__modal-bg');
       const x = document.querySelector('.form__close');
 
-      contactBtn.addEventListener('click', this.toggleModal);
-      messageLink.addEventListener('click', this.toggleModal);
-      backdrop.addEventListener('click', this.toggleModal);
-      x.addEventListener('click', this.toggleModal);
+      contactBtn.addEventListener('click', this.toggleModal.bind(this));
+      messageLink.addEventListener('click', this.toggleModal.bind(this));
+      backdrop.addEventListener('click', this.toggleModal.bind(this));
+      x.addEventListener('click', this.toggleModal.bind(this));
+  }
+
+  emptyFields() {
+    const formFields = document.querySelectorAll('.js-form-field');
+
+    formFields.forEach(field => {
+      field.value = '';
+    });
   }
 
   toggleModal(e) {
     e.preventDefault();
     const modal = document.querySelector('.contact__modal');
+    if (modal.classList.contains('hide')) {
+      this.emptyFields();
+    }
     modal.classList.toggle('hide');
     document.body.classList.toggle('no-scroll');
   }
