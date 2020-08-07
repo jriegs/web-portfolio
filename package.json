@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass dist/assets/sass/main.scss dist/assets/styles/styles.css -w",
-    "devserver": "live-server",
+    "devserver": "webpack-dev-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass dist/assets/sass/main.scss dist/assets/styles/styles.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/assets/styles/styles.comp.css -o dist/assets/styles/styles.prefix.css",
     "compress:css": "node-sass dist/assets/styles/styles.prefix.css dist/assets/styles/styles.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "build:js": "webpack"
   },
   "keywords": [],
   "author": "Julian Riegler",
@@ -18,8 +19,12 @@
   "devDependencies": {
     "autoprefixer": "^9.8.5",
     "concat": "^1.0.3",
+    "eslint": "^7.6.0",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1"
+    "postcss-cli": "^7.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

@@ -130,6 +130,10 @@
     @include respond(desktop) {
       font-size: 2rem;
     }
+
+    @include respond(big-desktop) {
+      margin-bottom: 2rem;
+    }
   }
   
   // .portfolio__link

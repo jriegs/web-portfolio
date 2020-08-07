@@ -3,7 +3,8 @@
 600-900: Phone/Tablet
 900-1200px: Tablet
 1200-1800px: Laptop/Desktop
-1800px +: Desktop
+1800-2000px: Desktop
+2000px+: Big Desktop
 
 $breakpoint choices:
 - large phone 
@@ -11,6 +12,7 @@ $breakpoint choices:
 - laptop
 - mid desktop
 - desktop
+- big desktop
 
 ORDER: Base + typography > general layout + grid > page layout + components
 
@@ -677,6 +679,9 @@ img:not(.non-responsive) {
     @media only screen and (min-width: 112.5em) {
       .portfolio__desc {
         font-size: 2rem; } }
+    @media only screen and (min-width: 125em) {
+      .portfolio__desc {
+        margin-bottom: 2rem; } }
   .portfolio__link {
     font-size: 1.8rem;
     color: #F96F27;
