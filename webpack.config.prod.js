@@ -2,17 +2,20 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
-    filename: 'index.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist', 'assets', 'scripts'),
     publicPath: 'dist/assets/scripts'
   },
-  devServer: {
-    contentBase: './dist/'
-  },
-  devtool: 'cheap-source-map',
+
+  /* 
+   *DevServer: {
+   *  contentBase: './dist/'
+   *},
+   */
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new CleanWebpackPlugin()
   ],

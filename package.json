@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:dev": "webpack",
     "watch:sass": "node-sass dist/assets/sass/main.scss dist/assets/styles/styles.css -w",
     "devserver": "webpack-dev-server",
     "start": "npm-run-all --parallel devserver watch:sass",
@@ -11,13 +12,18 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/assets/styles/styles.comp.css -o dist/assets/styles/styles.prefix.css",
     "compress:css": "node-sass dist/assets/styles/styles.prefix.css dist/assets/styles/styles.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
-    "build:js": "webpack"
+    "build:prod": "webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "Julian Riegler",
   "license": "ISC",
+  "browserslist": "> 0.2%, not dead",
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "concat": "^1.0.3",
     "eslint": "^7.6.0",
     "node-sass": "^4.14.1",
