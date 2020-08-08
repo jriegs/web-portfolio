@@ -16,14 +16,14 @@
   <meta name="description" content="Hi, my name is Julian Riegler and I'm a front-end web developer. I love coding fun interactive websites. Come browse my online portfolio to see my recent work.">
   <title>JR Web Creations | Julian Riegler Front-End Web Developer</title>
 
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-  <link rel="manifest" href="assets/images/site.webmanifest">
-  <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="assets/images/browserconfig.xml">
+  <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="assets/styles/styles.css">
@@ -101,7 +101,12 @@
         
           <div class="portfolio__project responsive-grid">
             <div class="portfolio__thumbnail">
-              <img class="portfolio__thumbnail-img" src="assets/images/placeholder.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/portfolio/placeholder--lg.jpg 1500w, assets/images/portfolio/placeholder--lg-hi-dpi.jpg 3000w" media="(min-width: 1380px)">
+                <source srcset="assets/images/portfolio/placeholder--med.jpg 1200w, assets/images/portfolio/placeholder--med-hi-dpi 2400w" media="(min-width: 990px)">
+                <source srcset="assets/images/portfolio/placeholder--sm.jpg 900w, assets/images/portfolio/placeholder--small-hi-dpi.jpg 1800w" media="(min-width: 640px)">
+                <img class="portfolio__thumbnail-img" src="assets/images/portfolio/placeholder--lg.jpg" srcset="assets/images/portfolio/placeholder--xs.jpg 640w, assets/images/portfolio/placeholder--xs-hi-dpi.jpg 1280w" alt="Ur Harmony Website">
+              </picture>              
             </div>
             <div class="portfolio__content">
               <div>
@@ -121,15 +126,20 @@
         
           <div class="portfolio__project responsive-grid">
             <div class="portfolio__thumbnail">
-              <img class="portfolio__thumbnail-img" src="assets/images/placeholder.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/portfolio/placeholder--lg.jpg 1500w, assets/images/portfolio/placeholder--lg-hi-dpi.jpg 3000w" media="(min-width: 1380px)">
+                <source srcset="assets/images/portfolio/placeholder--med.jpg 1200w, assets/images/portfolio/placeholder--med-hi-dpi 2400w" media="(min-width: 990px)">
+                <source srcset="assets/images/portfolio/placeholder--sm.jpg 900w, assets/images/portfolio/placeholder--small-hi-dpi.jpg 1800w" media="(min-width: 640px)">
+                <img class="portfolio__thumbnail-img" src="assets/images/portfolio/placeholder--lg.jpg" srcset="assets/images/portfolio/placeholder--xs.jpg 640w, assets/images/portfolio/placeholder--xs-hi-dpi.jpg 1280w" alt="Vue Stock Trader Website">
+              </picture>
             </div>
             <div class="portfolio__content">
               <div>
                 <h2 class="portfolio__header text-shadow-blk">
-                  Stock Trader
+                  Vue Stock Trader
                 </h2>
                 <p class="portfolio__desc text-shadow-blk">
-                  At the time of this project, I was working on learning and improving my understanding of javascript frameworks. The web app using Vue and firebase, is a basic demo of stock trading and focused more on the functionality than the look of the site. Though leaving out a lot of the complexities of an actual stock trader app, it still allows for a cool simulated experience of building a lucrative stock portfolio and going through the ups and downs of the day-to-day stock market (beware of extreme price flucuation).
+                  This web app using Vue and firebase, is a demo of stock trading and focuses on the functionality aspect. Though leaving out a lot of the complexities of a real life stock trader app, it still allows for a cool simulated experience of building a lucrative stock portfolio and going through the ups and downs of the day-to-day stock market. Unlike real life though you can save and reload as much as you please. Now, If only the money could somehow be accessed..
                 </p>
               </div>
               <a href="http://vuejs-stockdeploy.s3-website.us-east-2.amazonaws.com/" class="portfolio__link text-shadow-blk" target="_blank" rel="noopener">
@@ -143,7 +153,12 @@
         
           <div class="portfolio__project responsive-grid">
             <div class="portfolio__thumbnail">
-              <img class="portfolio__thumbnail-img" src="assets/images/placeholder.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/portfolio/placeholder--lg.jpg 1500w, assets/images/portfolio/placeholder--lg-hi-dpi.jpg 3000w" media="(min-width: 1380px)">
+                <source srcset="assets/images/portfolio/placeholder--med.jpg 1200w, assets/images/portfolio/placeholder--med-hi-dpi 2400w" media="(min-width: 990px)">
+                <source srcset="assets/images/portfolio/placeholder--sm.jpg 900w, assets/images/portfolio/placeholder--small-hi-dpi.jpg 1800w" media="(min-width: 640px)">
+                <img class="portfolio__thumbnail-img" src="assets/images/portfolio/placeholder--lg.jpg" srcset="assets/images/portfolio/placeholder--xs.jpg 640w, assets/images/portfolio/placeholder--xs-hi-dpi.jpg 1280w" alt="Clear View Escape Website">
+              </picture>
             </div>
             <div class="portfolio__content">
               <div>
@@ -165,7 +180,12 @@
         
           <div class="portfolio__project responsive-grid">
             <div class="portfolio__thumbnail">
-              <img class="portfolio__thumbnail-img" src="assets/images/placeholder.jpg" alt="">
+              <picture>
+                <source srcset="assets/images/portfolio/placeholder--lg.jpg 1500w, assets/images/portfolio/placeholder--lg-hi-dpi.jpg 3000w" media="(min-width: 1380px)">
+                <source srcset="assets/images/portfolio/placeholder--med.jpg 1200w, assets/images/portfolio/placeholder--med-hi-dpi 2400w" media="(min-width: 990px)">
+                <source srcset="assets/images/portfolio/placeholder--sm.jpg 900w, assets/images/portfolio/placeholder--small-hi-dpi.jpg 1800w" media="(min-width: 640px)">
+                <img class="portfolio__thumbnail-img" src="assets/images/portfolio/placeholder--lg.jpg" srcset="assets/images/portfolio/placeholder--xs.jpg 640w, assets/images/portfolio/placeholder--xs-hi-dpi.jpg 1280w" alt="Favorite Movies Website">
+              </picture>
             </div>
             <div class="portfolio__content">
               <div>
@@ -192,13 +212,12 @@
         <div class="responsive-grid">
         <!-- about col 1 start-->
         <div class="about__col about__col--image">
-          <!-- <picture>
-            <source srcset="assets/images/jrwc-about-me--large.jpg 1920w, assets/images/jrwc-about-me--large-hi-dpi.jpg 3840w" media="(min-width: 1380px)">
-            <source srcset="assets/images/jrwc-about-me--medium.jpg 1380w, assets/images/jrwc-about-me--medium-hi-dpi 2760w" media="(min-width: 990px)">
-            <source srcset="assets/images/jrwc-about-me--small.jpg 990w, assets/images/jrwc-about-me--small-hi-dpi.jpg 1980w" media="(min-width: 640px)">
-            <img class="about__image" src="assets/images/jrwc-about-me.jpg" srcset="assets/images/jrwc-about-me--smaller.jpg 640w, assets/images/jrwc-about-me--smaller-hi-dpi.jpg 1280w" alt="About Julian Riegler | JR Web Creations">
-          </picture> -->
-          <img class="about__image" src="assets/images/jrwc-about-me.jpg" alt="About Julian Riegler | JR Web Creations">
+          <picture>
+            <source srcset="assets/images/about/jrwc-about-me--lg.jpg 1500w, assets/images/about/jrwc-about-me--lg-hi-dpi.jpg 3000w" media="(min-width: 1380px)">
+            <source srcset="assets/images/about/jrwc-about-me--med.jpg 1200w, assets/images/about/jrwc-about-me--med-hi-dpi 2400w" media="(min-width: 990px)">
+            <source srcset="assets/images/about/jrwc-about-me--sm.jpg 900w, assets/images/about/jrwc-about-me--sm-hi-dpi.jpg 1800w" media="(min-width: 640px)">
+            <img class="about__image" src="assets/images/about/jrwc-about-me--lg.jpg" srcset="assets/images/about/jrwc-about-me--xs.jpg 640w, assets/images/about/jrwc-about-me--xs-hi-dpi.jpg 1280w" alt="About Julian Riegler | JR Web Creations">
+          </picture>
         </div>
         <!-- about col 1 end -->
         <!-- about col 2 start-->
@@ -206,7 +225,7 @@
           <div class="about__content">
             <h1 class="about__header text-shadow-blk bottom-margin">About Me</h1>
             <p class="about__text text-shadow-blk">
-              Hi, My name is <strong>Julian Riegler</strong> and I am a <strong>Front-End Web Developer</strong> living in Wisconsin. Originally born in Austria, I moved to the United States with my mother at the age of 7.
+              Hi, my name is <strong>Julian Riegler</strong> and I am a <strong>Front-End Web Developer</strong> living in Wisconsin. Originally born in Austria, I moved to the United States with my mother at the age of 7.
             </p>
             <p class="about__text text-shadow-blk">
               <strong>Web Development and Design</strong> is where my passion lies. I first discovered my love for it as 17 year old in high school and decided to pursue a career as a <strong>Web Developer</strong>. 2013 was when I graduated with a degree in Web Development and Design. Shortly after, I landed my first job in the IT field and have been working as a <strong>Professional Web Developer</strong> ever since.
