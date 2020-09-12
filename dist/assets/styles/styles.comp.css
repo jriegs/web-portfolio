@@ -499,6 +499,7 @@ img:not(.non-responsive) {
       margin-bottom: 1.5rem; }
   .about__link {
     color: #F96F27;
+    font-weight: bold;
     border-bottom: 2px solid transparent;
     text-decoration: none;
     margin-bottom: 3px;
