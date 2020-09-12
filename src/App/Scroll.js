@@ -6,7 +6,9 @@ export default class Scroll extends Header {
   }
 
   scrollHandler() {
-    if (document.documentElement.scrollTop > 10) {
+    const scrollContainer = document.querySelector('.scroll-container');
+
+    if (scrollContainer.scrollTop > 10) {
       Header.addScroll();
     } else {
       Header.removeScroll();

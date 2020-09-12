@@ -2,8 +2,9 @@ export default class Header {
   constructor() {
     const menuBtn = document.querySelector('.js-menu');
     const menuList = document.querySelector('.nav__list');
+    const scrollContainer = document.querySelector('.scroll-container');
     
-    window.addEventListener('scroll', this.scrollHandler);
+    scrollContainer.addEventListener('scroll', this.scrollHandler);
     window.addEventListener('load', this.scrollHandler);
     menuBtn.addEventListener('click', this.menuHandler);
     menuList.addEventListener('click', this.closeMenu);
